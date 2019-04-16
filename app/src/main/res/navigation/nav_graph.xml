@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:billingApp="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    billingApp:startDestination="@id/wordsListFragment"
+    >
+
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.alexkazancew.billingsystemsapp.features.addword.AddWordFragment"
+        android:label="AddWordFragment">
+        <action
+            android:id="@+id/action_addWordFragment_to_wordsListFragment"
+            billingApp:destination="@id/wordsListFragment"
+            billingApp:launchSingleTop="true"
+            billingApp:popUpToInclusive="true" billingApp:popUpTo="@id/wordsListFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editWordFragment"
+        android:name="com.alexkazancew.billingsystemsapp.features.editword.EditWordFragment"
+        android:label="EditWordFragment">
+        <action
+            android:id="@+id/action_editWordFragment_to_wordsListFragment"
+            billingApp:destination="@id/wordsListFragment"
+            billingApp:launchSingleTop="true"
+            billingApp:popUpToInclusive="true" billingApp:popUpTo="@id/wordsListFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/wordsListFragment"
+        android:name="com.alexkazancew.billingsystemsapp.features.wordslist.WordsListFragment"
+        android:label="WordsListFragment">
+        <action
+            android:id="@+id/action_wordsListFragment_to_addWordFragment"
+            billingApp:destination="@id/addWordFragment"
+            billingApp:enterAnim="@anim/nav_default_enter_anim"
+            billingApp:exitAnim="@anim/nav_default_exit_anim"
+            billingApp:launchSingleTop="true"
+            billingApp:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_wordsListFragment_to_editWordFragment"
+            billingApp:destination="@id/editWordFragment"
+            billingApp:enterAnim="@anim/nav_default_enter_anim"
+            billingApp:exitAnim="@anim/nav_default_exit_anim"
+            billingApp:launchSingleTop="true"
+            billingApp:popUpToInclusive="true" />
+    </fragment>
+</navigation>

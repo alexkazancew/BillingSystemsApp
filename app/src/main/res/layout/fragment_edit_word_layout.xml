@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:billingApp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/merge_word_editing"
+        android:layout_width="162dp"
+        android:layout_height="158dp"
+        billingApp:layout_constraintEnd_toEndOf="parent"
+        billingApp:layout_constraintStart_toStartOf="parent"
+        billingApp:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_word_button"
+        style="@style/LargeButton"
+        android:layout_marginBottom="16dp"
+        android:text="@string/save_word_button_title"
+        billingApp:layout_constraintBottom_toBottomOf="parent"
+        billingApp:layout_constraintEnd_toEndOf="parent"
+        billingApp:layout_constraintHorizontal_bias="0.5"
+        billingApp:layout_constraintStart_toStartOf="parent">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
